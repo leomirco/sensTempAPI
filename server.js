@@ -17,6 +17,11 @@ app.use(bodyParser.json());
 var routes = require('./api/routes/sensTempRoutes'); //importing route
 routes(app); //register the route
 
+//test per capire se il server su heroku funziona!
+
+app.get('/', (req, res) => {
+  res.send('Hello World, from sensTempAPI');
+});
 
 app.listen(port);
 
